@@ -1,0 +1,10 @@
+.slider__products--content {
+    /* background-color: red; */
+    border-top:4px solid rgb(80, 80, 80) ;
+    padding: 20px 40px;
+}
+
+.slider__products--content h2 {
+    font-size: 3.5rem;
+    text-align: center;
+}

@@ -1,0 +1,229 @@
+/* !==================================! Seccion 1 !=========================== */
+
+.info__container {
+    display: flex;
+    padding: 20px 60px;
+    margin-bottom: 60px;
+}
+.info__container h2{
+    font-size: 4.5rem;
+}
+
+
+.info__container__text {
+    max-width: 600px;
+    font-size: 1.3rem;
+   padding: 20px 0 0 50px; 
+}
+.link__box {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.link{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    background-color: #666;
+    transition: all .3s ease-in-out;
+    border-left: 2px solid #666;
+    border-right: 2px solid #666;
+}
+.link:hover{
+    color: rgb(90, 90, 90);
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(87, 87, 87, 0.103);
+}
+/* !==================================! Seccion 2 !=========================== */
+
+.quality__container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    padding: 20px 60px;
+}
+
+.quality__info {
+    display: flex;
+    flex-direction: column;
+}
+.quality__info h2 {
+font-size: 4.5rem;
+}
+.quality__info p {
+    font-size: 1.3rem;
+}
+.quality__info h4 {
+    font-size: 1.8rem;
+}
+.quality__info__text {
+    display: flex;
+    max-width: 623px;
+    margin-top: 20px;
+}
+.quality__info__text li{ 
+    white-space: wrap;
+    max-width: 300px;
+}
+
+.quality__video {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 0 0 50px; 
+}
+.quality__video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+/* !==================================! Seccion 3 !=========================== */
+
+.new__Product__container {
+    margin-top: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-bottom: 50px;
+}
+.new__product_title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 200px;
+    background:url('/src/assets/img/new1.png');
+    background-repeat: no-repeat;
+}
+.new__product_title h2 {
+    font-size: 4.5rem;
+}
+.new__product_title p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.new__product_box{
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* !==================================! Seccion 4 !=========================== */
+.customers__container {
+    padding: 60px;
+}
+.customers__container h2 {
+    font-size: 4.5rem;
+}
+.customers__container p{
+    font-size: 1.6rem;
+}
+
+.customers__box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.customers__opinion h5{
+    font-size: 1.5rem;
+}
+.rating img {
+    width: 100px;
+}
+
+.author-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.author-info p {
+    font-size: 1.3rem;
+}
+.author-info img {
+    width:50px;
+    border-radius: 50%;
+}
+
+/* !==================================! Seccion 4 !=========================== */
+
+.subscription__container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+ display: flex;
+ flex-direction: column;
+ place-items: center;
+}
+.subscription__container h2 {
+    font-size: 2rem;
+}
+.subscription__container p {
+    font-size: 1.4rem;
+}
+.subcription__form {
+    margin: 20px 0;
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 4px;
+}
+.subcription__form input { 
+    border: none;
+    outline: none;
+    border-bottom:2px solid rgb(179, 179, 179) ;
+    border-top:2px solid rgb(179, 179, 179);
+    border-radius: 4px;
+    padding: 5px 3px;
+    font-size: 1.5rem;
+}
+
+.subcription__form button {
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    background-color: #666;
+    transition: all .3s ease-in-out;
+    border-left: 2px solid #666;
+    border-right: 2px solid #666;
+}
+.subcription__form button:hover{
+    color: rgb(90, 90, 90);
+    background-color: white;
+    box-shadow: 0 0 20px rgba(87, 87, 87, 0.103);
+}
+.conditions a{
+    color: #088178;
+}
+
+
+.link{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    background-color: #666;
+    transition: all .3s ease-in-out;
+    border-left: 2px solid #666;
+    border-right: 2px solid #666;
+}
+.link:hover{
+    color: rgb(90, 90, 90);
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(87, 87, 87, 0.103);
+}

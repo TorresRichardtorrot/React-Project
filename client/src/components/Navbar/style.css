@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navbar__contenedor{
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color:#E3E6F3 ;
+    font-size: 1.6rem;
+    transition: position 3s ease-in;
+    z-index: 100;
+}
+.navbar__contenedor--logo a{
+    display: flex;
+    gap: 10px;
+}
+.navbar__contenedor--logo .logo_image-1 { 
+    width: 41px;
+    height: 50px;
+}
+.navbar__contenedor--logo .logo_image-2 { 
+    width: 115px;
+    height: 50px;
+}
+.navbar__contenedor--buscador {
+    position: relative;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(173, 173, 173);
+    padding:5px 15px;
+    padding-right: 37px;
+    border-radius: 30px;
+    width: 400px;
+}
+.navbar__contenedor--buscador--input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.navbar__contenedor--buscador--btn{
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 50%;
+    right: 0;
+    height: 37px;
+    width: 37px;
+    color: white;
+    border-radius: 100%;
+    background: #666363;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.navbar__contenedor--links ul{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+}
+.navbar__contenedor--links ul li {
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+
+.link__icon img{
+    width: 39px;
+}
+
+
+.navbar__contenedor--links ul li a{
+    display: inline;
+    position: relative;
+    margin: 0 10px; 
+    font-weight: 500;
+}
+.navbar__contenedor--links ul li a:hover{
+    color: #2e2e2e;
+}
+   
+
+.navbar__contenedor--links ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%; 
+    height: 2px; 
+    background-color: #b8b8b8;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all .3s ease;
+}
+
+.navbar__contenedor--links ul li a:hover::before {
+    transform: scale(1); 
+    width: 100%;
+}

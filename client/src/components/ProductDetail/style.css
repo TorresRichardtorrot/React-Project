@@ -1,0 +1,124 @@
+.product_detail--info {
+    display: flex;
+    gap: 30px;
+}
+.product__img img{
+    max-width: 660px;
+    max-height: 700px;
+    object-fit: cover;
+}
+.product__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.product__info h2{
+    font-size: 3.3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.product__info--talla {
+    
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.product__info--talla select {
+    outline: none;
+    border: none;
+    width: 300px;
+    padding: 12px 15px;
+    color: #666;
+    background-color: #ececec;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 3px;
+}
+
+.product__info--cantidad {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 10px;
+}
+.cantidad--input {
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+}
+.cantidad--input button{
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    border: none;
+    background-color: #ececec;
+    height: 100%;
+    cursor: pointer;
+    transition: all .3 ease-in;
+}
+.cantidad--input button:hover{ 
+    color: rgb(73, 73, 73);
+}
+
+.cantidad--input input{
+    outline: none;
+    background-color: #ececec;
+    border: none;
+    padding: 10px;
+    width: 50px;
+    height: 100%;
+    color: #666;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 0;
+    text-align: center;
+    border-radius: 3px;
+}
+.cantidad--input input::-webkit-inner-spin-button,
+.cantidad--input input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+.product__info--cantidad span {
+    padding: 10px;
+    background-color: #ececec;
+    border-radius: 3px;
+}
+
+.product__info--btn {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+}
+.product__info--btn button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #666;
+    transition: all .3s ease-in-out;
+    border-left: 2px solid #666;
+    border-right: 2px solid #666;
+}
+
+.product__info--btn button:hover{
+    color: rgb(90, 90, 90);
+    background-color: transparent;
+    border-radius: 4px;
+}

@@ -1,0 +1,164 @@
+[{
+    "_id":  "6653908b1313152c626435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },
+  {
+    "_id": "6539018a5313152c626435530",
+    "title": "no zapato",
+    "price": 888,
+    "category": "some category33",
+    "images": [
+      "aa812e39-3e6d-462c-868e-e7762af70a17.png",
+      "23d09e5c-2dd5-41e9-b600-45fbe4f0e7ac.png"
+    ],
+    "brand": "adidas",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:01.299Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:01.299Z"
+    }
+  },{
+    "_id":  "653908b21313152c626435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b13131523c6264935532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b1313152c6286435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b13213152c626435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b1313152c6726435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b13131542c626435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  },{
+    "_id":  "653908b13131523c626435532",
+    "title": "no zapato",
+    "price": 22223,
+    "category": "some category33",
+    "images": [
+      "39733d88-e447-4498-ae2c-fb828d1e3b80.png",
+      "c319910f-8e99-45f4-af8a-16a6e7e1aba2.png"
+    ],
+    "brand": "nike",
+    "type": "some type33",
+    "genre": "some genre",
+    "createdAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-25T12:23:13.907Z"
+    }
+  }]

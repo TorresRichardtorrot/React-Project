@@ -1,0 +1,37 @@
+.sidebar--btn {
+    border: none;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252121;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(85, 85, 85);
+    border-top:1px solid rgb(85, 85, 85) ;
+    transition: all .4s ease;
+}
+.sidebar--btn:hover{
+    background-color: rgb(85, 85, 85);
+}
+.sidebar--btn svg {
+    width: 20px;
+    height: 24px;
+}
+
+.sidebar--iten {
+    text-align: center;
+    padding: 3px 30px;
+    color: white;
+    font-size: 1.2rem;
+    transition: .2s all ease-in-out;
+    text-transform:capitalize;
+}
+.sidebar--iten:hover {
+    transform: scaleX(1.1);
+}
+
+.hidden {
+    display: none;
+}

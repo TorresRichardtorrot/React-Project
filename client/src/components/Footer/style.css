@@ -1,0 +1,32 @@
+footer{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-between;
+    padding:40px 60px;
+    background-color: gainsboro;
+}
+footer h4 {
+    font-size: 1.6rem;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+
+.contact__box {
+font-size: 1.3rem;
+}
+.contact__social{
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+}
+.contact__logo {
+    display: flex;
+}
+.logo_image-1{
+    width: 50px;
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "title":"Marcas",
+        "value":["nike","adidas","guess","rebook"],
+        "icon":"Marca"
+    },
+    {
+       "title":"Genero",
+       "value":["Dama","Caballero"],
+       "icon":"Genero"
+    }
+]
