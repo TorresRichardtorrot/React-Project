@@ -1,15 +1,7 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useState } from 'react'
 import { getProductRequest, getProductsRequest, getNewproductRequest } from '../api/products'
 
-const ProductsContext = createContext()
-
-export const useProducts = () => {
-  const context = useContext(ProductsContext)
-  if (!context) {
-    throw new Error('useProducts debe utilizarse dentro de un ProductsProvider')
-  }
-  return context
-}
+export const ProductsContext = createContext()
 
 function ProductsProvider ({ children }) {
   const [products, setProducts] = useState([])
@@ -45,9 +37,9 @@ function ProductsProvider ({ children }) {
   }
 
   return (
-    <ProductsContext.Provider value={{ products, getProduct, getProducts, getNewProduct }}>
-      {children}
-    </ProductsContext.Provider>
+      <ProductsContext.Provider value={{ products, getProduct, getProducts, getNewProduct }}>
+        {children}
+      </ProductsContext.Provider>
   )
 }
 

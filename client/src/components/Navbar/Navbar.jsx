@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import { GoSearch } from 'react-icons/go'
 import './style.css'
+import { useId } from 'react'
+import Cart from '../shoppingCart/Cart'
 const rutaIcons = '/src/assets/icons/'
 
 function Navbar () {
+  const cartCheckboxId = useId()
   return (
           <header className='navbar__contenedor'>
             <div className='navbar__contenedor--logo'>
@@ -24,15 +27,24 @@ function Navbar () {
                     <li><Link to='/tienda'>Tienda</Link></li>
                     <li><Link to='/about'>Nosotros</Link></li>
                     <li><Link to='/'>Contactos</Link></li>
-                    <li className='link__icon'>
+
+                   <li className='navbar__contenedor--cart'>
+                    <label className='link__icon' htmlFor={cartCheckboxId}>
                       <img src={`${rutaIcons}cart.svg`} />
-                    </li>
+                    </label>
+                    <input type='checkbox' id={cartCheckboxId} hidden/>
+
+                    <Cart/>
+
+                   </li>
+
                     <li className='link__icon'>
-                    <img src={`${rutaIcons}user.svg`} />
+                      <img src={`${rutaIcons}user.svg`} />
                     </li>
 
                 </ul>
             </nav>
+
           </header>
   )
 };

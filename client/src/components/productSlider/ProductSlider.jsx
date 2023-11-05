@@ -1,4 +1,4 @@
-import { useProducts } from '../../context/ProductsContext'
+import { useProducts } from '../../hook/useProducts'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import CardProduct from '../CardProdut/CardProduct'
 import { useEffect } from 'react'

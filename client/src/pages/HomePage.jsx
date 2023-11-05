@@ -4,7 +4,7 @@ import Footer from '../components/Footer/Footer'
 import './HomeStyle.css'
 import { Link } from 'react-router-dom'
 import CardProduct from '../components/CardProdut/CardProduct'
-import { useProducts } from '../context/ProductsContext'
+import { useProducts } from '../hook/useProducts'
 
 import { useEffect, useState } from 'react'
 

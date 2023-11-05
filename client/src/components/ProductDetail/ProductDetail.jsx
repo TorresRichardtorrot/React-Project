@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 function ProductDetail ({ title, price, brand, category, images }) {
   const [amount, setAmount] = useState(1)
+  const urlImages = 'http://localhost:9080/img/'
 
   const increment = () => {
     setAmount(amount + 1)
@@ -24,7 +25,7 @@ function ProductDetail ({ title, price, brand, category, images }) {
     <main className='product_detail--info'>
 
     <div className='product__img'>
-      <img src={`http://localhost:9080/img/${images[0]}`} alt="" />
+      <img src={`${urlImages + images[0]}`} alt={`${brand}-${title}`} />
     </div>
 
     <div className='product__info'>

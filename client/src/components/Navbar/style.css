@@ -8,7 +8,6 @@ a{
     color: black;
 }
 .navbar__contenedor{
-    /* position: fixed; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -81,7 +80,9 @@ a{
 
 .link__icon img{
     width: 39px;
+    cursor: pointer;
 }
+
 
 
 .navbar__contenedor--links ul li a{
@@ -111,4 +112,91 @@ a{
 .navbar__contenedor--links ul li a:hover::before {
     transform: scale(1); 
     width: 100%;
+}
+.navbar__contenedor--cart {
+    position: relative;
+}
+.cart__contenedor {
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    position: absolute;
+    right: 63%;
+    top: 76%;
+    width: 0;
+    height: 0;
+    border-radius: 12px;
+    border: 1px solid rgb(194, 194, 194);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: width 0.5s, height 0.5s, opacity 0.5s, visibility 0.5s;
+    z-index: 3;
+}
+
+.link__icon ~ input:checked ~ .cart__contenedor{
+    width: 350px;
+    height: 400px;
+    opacity: 1;
+    visibility: visible;
+    transition: width 0.5s, height 0.5s, opacity 0.5s, visibility 0.5s;
+}
+
+/* ! ==================== Cart ================ */
+.cart__box{
+    overflow: scroll;
+    height: 100%;
+}
+
+.cart__box::-webkit-scrollbar {
+  width: 5px;
+}
+.cart__box::-webkit-scrollbar-thumb {
+  background-color: #979797;
+  border-radius: 4px;
+} 
+
+
+
+.cart__products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cart__products img {
+    width: 70px;
+    height: 70px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.cart__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 60%;
+}
+
+.cart__products small{
+    padding: 1px 10px;
+    border: 2px solid rgb(38, 121, 0);
+    border-radius: 30px;
+    color:  rgb(38, 121, 0);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.cart__products button {
+    display: flex;
+    place-content: center;
+    border: 1px solid rgba(255, 0, 0, 0.699);
+    border-radius: 30px;
+    font-size: 23px;
+    color: rgba(255, 0, 0, 0.623);
+    cursor: pointer;
 }

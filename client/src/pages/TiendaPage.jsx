@@ -3,7 +3,7 @@ import Footer from '../components/Footer/Footer'
 import Sidebar from '../components/Sidebar/Sidebar'
 import CardProduct from '../components/CardProdut/CardProduct'
 import './TiendaStyle.css'
-import { useProducts } from '../context/ProductsContext'
+import { useProducts } from '../hook/useProducts'
 import { useEffect } from 'react'
 
 function TiendaPage () {
