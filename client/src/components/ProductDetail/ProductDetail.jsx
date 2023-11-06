@@ -1,10 +1,20 @@
+/* eslint-disable react/prop-types */
 import './style.css'
 import { HiMiniPlus, HiChevronLeft, HiChevronRight } from 'react-icons/hi2'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useCart } from '../../hook/useCart'
 
-function ProductDetail ({ title, price, brand, category, images }) {
+function ProductDetail ({ product }) {
+  const { addToCart } = useCart()
+  const [sendToCart, setSendToCart] = useState(product)
   const [amount, setAmount] = useState(1)
+  const [size, setSize] = useState('')
   const urlImages = 'http://localhost:9080/img/'
+
+  useEffect(() => {
+    const newCart = { ...product, quantity: amount, size }
+    setSendToCart(newCart)
+  }, [amount, size, product])
 
   const increment = () => {
     setAmount(amount + 1)
@@ -21,19 +31,30 @@ function ProductDetail ({ title, price, brand, category, images }) {
       setAmount(newValue)
     }
   }
+
+  const handleSizeChange = (event) => {
+    setSize(event.target.value)
+  }
+
+  const handleCartClick = () => {
+    addToCart(sendToCart)
+    setSize('')
+    setAmount(1)
+  }
+
   return (
     <main className='product_detail--info'>
 
     <div className='product__img'>
-      <img src={`${urlImages + images[0]}`} alt={`${brand}-${title}`} />
+      <img src={`${urlImages + product.images[0]}`} alt={`${product.brand}-${product.title}`} />
     </div>
 
     <div className='product__info'>
-         <h2>{brand}-{title}</h2>
+         <h2>{product.brand}-{product.title}</h2>
          <div className='product__info--talla'>
-            <label htmlFor="talla">Talla</label>
-            <select id="talla">
-                <option value="40">Escoge una opción</option>
+            <label htmlFor="size">Talla</label>
+            <select id="size" value={size} onChange={handleSizeChange}>
+                <option value="">Escoge una opción</option>
                 <option value="40">40</option>
                 <option value="41">41</option>
                 <option value="42">42</option>
@@ -51,15 +72,15 @@ function ProductDetail ({ title, price, brand, category, images }) {
                 <button onClick= {increment}><HiChevronRight/></button>
             </div>
 
-            <span>${price}</span>
+            <span>${product.price}</span>
          </div>
          <div className='product__info--btn'>
-            <button><HiMiniPlus/> Añadir al carrito</button>
+            <button onClick={handleCartClick} ><HiMiniPlus/> Añadir al carrito</button>
             <button><HiMiniPlus/> Añadir a favoritos</button>
          </div>
          <div>
             <p>compartir</p>
-            <p>{category}</p>
+            <p>{product.category}</p>
          </div>
     </div>
     </main>

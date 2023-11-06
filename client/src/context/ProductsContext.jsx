@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState } from 'react'
 import { getProductRequest, getProductsRequest, getNewproductRequest } from '../api/products'
 
@@ -35,7 +36,6 @@ function ProductsProvider ({ children }) {
       console.log(error)
     }
   }
-
   return (
       <ProductsContext.Provider value={{ products, getProduct, getProducts, getNewProduct }}>
         {children}

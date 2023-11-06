@@ -29,14 +29,7 @@ function TiendaPage () {
                           )
                         : (
                             products.map(product => (
-                          <CardProduct
-
-                          brand={product.brand}
-                          title={product.title}
-                          price={product.price}
-                          images={product.images}
-                          id={product._id}
-                          key={product._id}
+                          <CardProduct key={product._id} product={product}
                           />
                             ))
                           )

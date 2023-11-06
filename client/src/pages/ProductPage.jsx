@@ -33,12 +33,7 @@ function ProductPage () {
                        <h2>no product</h2>
                       )
                     : (
-                      <ProductDetail
-                      title={product.title}
-                      price={product.price}
-                      brand={product.brand}
-                      images={product.images}
-                      category={product.category}/>
+                      <ProductDetail product={product}/>
                       )}
               </div>
 

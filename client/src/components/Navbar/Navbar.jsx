@@ -3,9 +3,12 @@ import { GoSearch } from 'react-icons/go'
 import './style.css'
 import { useId } from 'react'
 import Cart from '../shoppingCart/Cart'
+import { useCart } from '../../hook/useCart'
 const rutaIcons = '/src/assets/icons/'
 
 function Navbar () {
+  const { cart } = useCart()
+  const quantityProducts = cart.length
   const cartCheckboxId = useId()
   return (
           <header className='navbar__contenedor'>
@@ -29,6 +32,7 @@ function Navbar () {
                     <li><Link to='/'>Contactos</Link></li>
 
                    <li className='navbar__contenedor--cart'>
+                    <span className='cart__quantity'>{quantityProducts}</span>
                     <label className='link__icon' htmlFor={cartCheckboxId}>
                       <img src={`${rutaIcons}cart.svg`} />
                     </label>

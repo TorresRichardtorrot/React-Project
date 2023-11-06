@@ -1,5 +1,6 @@
 import { useProducts } from '../../hook/useProducts'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useParams } from 'react-router-dom'
 import CardProduct from '../CardProdut/CardProduct'
 import { useEffect } from 'react'
 import 'swiper/css'
@@ -7,9 +8,12 @@ import './style.css'
 
 function ProductSlider () {
   const { products, getProducts } = useProducts()
+  const { id } = useParams()
+  const productSlider = products.filter(product => product._id !== id)
   useEffect(() => {
     getProducts()
   }, [])
+
   return (
   <article className='slider__products--content'>
     <h2>Recomendados</h2>
@@ -18,20 +22,14 @@ function ProductSlider () {
       slidesPerView={4}
     >
       {
-         products.length === 0
+         productSlider.length === 0
            ? (
-               <h1>hola</h1>
+               <h1>No tenemos productos por los momentos</h1>
              )
            : (
-               products.map(product => (
+               productSlider.map(product => (
                 <SwiperSlide key={product._id}>
-                    <CardProduct
-                    id={product._id}
-                    price={product.price}
-                    title={product.title}
-                    brand={product.brand}
-                    images={product.images}
-                       />
+                    <CardProduct product={product}/>
                 </SwiperSlide>
                )
                )

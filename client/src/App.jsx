@@ -5,10 +5,12 @@ import TiendaPage from './pages/TiendaPage'
 import NosotrosPage from './pages/NosotrosPage'
 import ProductPage from './pages/ProductPage'
 import ProductsProvider from './context/ProductsContext'
+import CartProvider from './context/CartContext'
 
 function App () {
   return (
     <ProductsProvider>
+      <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -19,6 +21,7 @@ function App () {
         <Route path='/about' element={<NosotrosPage />} />
       </Routes>
   </BrowserRouter>
+  </CartProvider>
   </ProductsProvider>
   )
 }

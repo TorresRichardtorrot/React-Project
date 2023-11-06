@@ -1,21 +1,39 @@
-import { GoX } from 'react-icons/go'
+import { useCart } from '../../hook/useCart'
+import { CardProduct } from './CardProduct'
+import { MdOutlineRemoveShoppingCart } from 'react-icons/md'
 function Cart () {
+  const { cart, clearCart } = useCart()
   return (
     <aside className='cart__contenedor'>
-    <h4>No tienes productos agregados</h4>
-    <div className='cart__box'>
+        {cart.length > 0
+          ? <div className='cart__contenedor--btn'>
+          <button className='btn__removeCart' onClick={() => clearCart()}><MdOutlineRemoveShoppingCart/></button>
+          <button className='btn__pay'>Pagar</button>
+         </div>
+          : ''
 
-      <div className='cart__products'>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDzV2xDxDFqsG3d9rAGqOR0-ab2xygp5XIBw&usqp=CAU" alt="" />
-        <div className='cart__info'>
-          <h4>walkman</h4>
-          <p>some description</p>
-          <small>$ 249.90</small>
+        }
+    {cart.length === 0
+      ? (
+        <div className='cart__no-products'>
+          <h2>Sin productos</h2>
+          <MdOutlineRemoveShoppingCart/>
         </div>
-        <button><GoX/></button>
-      </div>
+
+        )
+      : (
+        <div className='cart__box'>
+    {
+       cart.map(product => (
+          <CardProduct key={product._id} product={product}/>
+       ))
+    }
+
     </div>
-  </aside>
+        )}
+
+    </aside>
+
   )
 }
 
