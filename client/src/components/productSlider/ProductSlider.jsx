@@ -5,7 +5,6 @@ import CardProduct from '../CardProdut/CardProduct'
 import { useEffect } from 'react'
 import 'swiper/css'
 import './style.css'
-
 function ProductSlider () {
   const { products, getProducts } = useProducts()
   const { id } = useParams()
@@ -19,7 +18,9 @@ function ProductSlider () {
     <h2>Recomendados</h2>
       <Swiper
       spaceBetween={0}
-      slidesPerView={4}
+      slidesPerView='auto'
+      navigation={true}
+
     >
       {
          productSlider.length === 0
@@ -28,7 +29,7 @@ function ProductSlider () {
              )
            : (
                productSlider.map(product => (
-                <SwiperSlide key={product._id}>
+                <SwiperSlide className='slider__product--card' key={product._id}>
                     <CardProduct product={product}/>
                 </SwiperSlide>
                )

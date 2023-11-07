@@ -23,11 +23,11 @@ function HomePage () {
   return (
     <>
         <Navbar/>
-        <Slider />
+        <Slider/>
           <main>
             {/* ==================================! Seccion 1 !=========================== */}
           <section className='info__container'>
-                  <h2>Descubre los accesorios perfectos para ti</h2>
+                  <h2><span>Descubre</span> los accesorios perfectos para ti</h2>
               <div className="info__container__text">
                   <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus nulla ipsum eos nihil aliquid, quis dolores. Inventore rem quisquam alias repellat enim iusto necessitatibus corporis? Aliquam dolor dolorem quos.
@@ -88,7 +88,7 @@ function HomePage () {
               </section>
               {/* ==================================! Seccion 4 !=========================== */}
               <section className='customers__container'>
-                  <div>
+                  <div className='customer__title'>
                     <h2>Clientes felices</h2>
                     <p>Escuche lo que nuestros clientes tienen que decir sobre nosotros</p>
                   </div>

@@ -35,3 +35,21 @@
 .hidden {
     display: none;
 }
+
+@media (max-width:1000px){
+    .sideBar__container{  
+        display: flex;
+    }
+    .sidebar__box{
+        position: relative;
+    }
+    .sidebar--item--box{
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #252121;
+       border-bottom-left-radius:4px;
+       border-bottom-right-radius: 4px;
+        z-index: 5;
+    }
+}

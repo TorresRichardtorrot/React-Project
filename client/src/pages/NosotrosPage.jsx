@@ -1,9 +1,15 @@
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer'
+import './NosotrosStyle.css'
 function NosotrosPage () {
   return (
         <>
             <Navbar/>
-            <h1>Nosotros</h1>
+            <main className='abouts__container'>
+              <h1>nosotros</h1>
+
+            </main>
+            <Footer/>
         </>
   )
 }

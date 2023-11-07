@@ -1,5 +1,6 @@
 /* !==================================! Seccion 1 !=========================== */
 
+
 .info__container {
     display: flex;
     padding: 20px 60px;
@@ -37,6 +38,7 @@
     background-color: transparent;
     box-shadow: 0 0 20px rgba(87, 87, 87, 0.103);
 }
+
 /* !==================================! Seccion 2 !=========================== */
 
 .quality__container {
@@ -131,7 +133,10 @@ font-size: 4.5rem;
     justify-content: space-between;
     gap: 45px;
 }
-
+.customers__opinion {
+    display: flex;
+    flex-direction: column;
+}
 .customers__opinion h5{
     font-size: 1.5rem;
 }
@@ -226,4 +231,62 @@ font-size: 4.5rem;
     color: rgb(90, 90, 90);
     background-color: transparent;
     box-shadow: 0 0 20px rgba(87, 87, 87, 0.103);
+}
+
+@media (max-width:1000px){
+    .info__container{
+        flex-direction: column;
+    }
+    .info__container__text{
+        padding: 0;
+    }
+    .quality__container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .quality__video{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        max-width: 100%; 
+    }
+    .link__box a{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+    }
+    .link__box {
+        justify-content: center;
+        gap: 40px;
+    }
+    .quality__info {
+        align-items: center;
+    }
+    .customer__title{
+        text-align: center;
+    }
+    .subscription__container{
+        text-align: center;
+    }
+}
+@media (max-width:700px){
+    .info__container {
+        text-align: center;
+    }
+    .info__container h2{
+        font-size: 3.5rem;
+        margin-bottom: 21px;
+    }
+    .customers__box{
+        flex-direction: column;
+    }
+    .customers__opinion{
+        align-items: center;
+    }
+    .customers__opinion h5{
+        text-align: center;
+    }
+    
 }

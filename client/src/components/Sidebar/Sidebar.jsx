@@ -4,7 +4,7 @@ import Sidebaritem from './Sidebaritem'
 
 export default function Sidebar () {
   return (
-        <nav>
+        <nav className='sideBar__container'>
            {
             data.map((items, index) => <Sidebaritem key={index} items={items}/>)
            }
