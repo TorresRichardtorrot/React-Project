@@ -14,3 +14,14 @@ De esta manera, tendrás tanto el servidor como el cliente en ejecución.
 ### ¡Importante!
 
 La aplicación no cargará los productos de la base de datos sin la configuración adecuada de las variables de entorno.
+
+### imagenes 
+
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/1.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/2.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/3.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/4.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/5.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/6.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/7.PNG"/>
+<img src="https://github.com/TorresRichardtorrot/portafolio-estatico/blob/main/img/Zapateria/8.PNG"/>
