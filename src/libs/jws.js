@@ -1,4 +1,3 @@
-import { token } from "morgan";
 import { TOKEN_SECRET } from "../config.js";
 import Jws from "jsonwebtoken";
 

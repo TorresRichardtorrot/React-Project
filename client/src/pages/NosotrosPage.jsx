@@ -8,8 +8,9 @@ function NosotrosPage () {
             <main className='abouts__container'>
               <h1>nosotros</h1>
 
+              <Footer/>
             </main>
-            <Footer/>
+
         </>
   )
 }

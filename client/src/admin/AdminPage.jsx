@@ -1,4 +1,7 @@
+import { useAuth } from '../hook/auth'
 function AdminPage () {
+  const { logout, user } = useAuth()
+  console.log(user)
   return (
         <>
             <aside>
@@ -13,7 +16,10 @@ function AdminPage () {
                 </ul>
             </aside>
             <main>
-
+                <h1>hola admin</h1>
+                <button onClick={() => {
+                  logout()
+                }}>Chao</button>
             </main>
         </>
   )

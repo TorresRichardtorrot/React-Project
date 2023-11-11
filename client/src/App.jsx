@@ -7,11 +7,14 @@ import ProductPage from './pages/ProductPage'
 import ProductsProvider from './context/ProductsContext'
 import CartProvider from './context/CartContext'
 import AdminPage from './admin/AdminPage'
+import AuthProvider from './context/AuthContext'
+import ProtectedRoute from './ProtectedRoute'
 
 function App () {
   return (
+    <AuthProvider>
     <ProductsProvider>
-      <CartProvider>
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -21,7 +24,7 @@ function App () {
         <Route path='/tienda/brands/:name' element={<TiendaPage />} />
         <Route path='/about' element={<NosotrosPage />} />
 
-        <Route>
+        <Route element={<ProtectedRoute/>}>
           <Route path='/admin' element={<AdminPage />} />
         </Route>
 
@@ -29,6 +32,7 @@ function App () {
   </BrowserRouter>
   </CartProvider>
   </ProductsProvider>
+  </AuthProvider>
   )
 }
 

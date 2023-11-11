@@ -21,7 +21,7 @@ export const register = async (req, res) => {
 
     const userSaved = await newUser.save();
 
-    const token = await createAccessToken({ id: userSaved._id });
+    const token = await createAccessToken({ id: userSaved._id,role:userSaved.role });
 
     res.cookie("token", token);
 
@@ -29,6 +29,7 @@ export const register = async (req, res) => {
       id: userSaved._id,
       username: userSaved.username,
       email: userSaved.email,
+      role:userSaved.role,
       createdAt: userSaved.createdAt,
       updatedAt: userSaved.updatedAt,
     });
@@ -48,13 +49,14 @@ export const login = async (req, res) => {
     const isMatch = await bcrypt.compare(password, userFound.password);
     if (!isMatch) return res.status(400).json(["Credenciales incorrecta"]);
 
-    const token = await createAccessToken({ id: userFound._id });
+    const token = await createAccessToken({ id: userFound._id, role:userFound.role });
 
     res.cookie("token", token);
     res.json({
       id: userFound._id,
       username: userFound.username,
       email: userFound.email,
+      role:userFound.role,
       createdAt: userFound.createdAt,
       updatedAt: userFound.updatedAt,
     });
@@ -93,6 +95,7 @@ export const verifyToken = async (req, res) => {
         id: userFound._id,
         username: userFound.username,
         email: userFound.email,
+        role: userFound.role
       });
     });
   } catch (error) {
@@ -113,6 +116,7 @@ export const profile = async (req, res) => {
       id: userFound._id,
       username: userFound.username,
       email: userFound.email,
+      role:userFound.role,
       createdAt: userFound.createdAt,
       updatedAt: userFound.updatedAt,
     });

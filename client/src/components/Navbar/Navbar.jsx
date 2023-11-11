@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { GoSearch } from 'react-icons/go'
 import { TfiMenu } from 'react-icons/tfi'
 import { MdShoppingCartCheckout } from 'react-icons/md'
@@ -14,6 +14,11 @@ function Navbar () {
   const quantityProducts = cart.length
   const cartCheckboxId = useId()
   const menuCheckboxId = useId()
+  const navigate = useNavigate()
+
+  const handleClickUser = () => {
+    navigate('/auth')
+  }
 
   return (
           <header className='navbar__contenedor'>
@@ -51,9 +56,8 @@ function Navbar () {
                     <Cart/>
 
                    </li>
-
-                    <li className='link__icon'>
-                      <TbUserCircle/>
+                    <li>
+                      <button onClick={handleClickUser} className='link__icon user_btn'><TbUserCircle/></button>
                     </li>
 
                 </ul>

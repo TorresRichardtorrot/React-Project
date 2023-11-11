@@ -95,6 +95,10 @@ a{
     font-size: 3.5rem;
     cursor: pointer;
 }
+.user_btn{
+    border: none;
+    background-color: transparent;
+}
 
 
 

@@ -1,0 +1,102 @@
+.form__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/src/assets/img/3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form__box{
+    padding: 5px 40px 30px;
+    border: 1px solid gray;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    transition: all .5s ease;
+}
+.form__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__box img {
+    width: 170px;
+}
+.form__box h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 3rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input__box {
+    position: relative;
+    font-size: 3rem; 
+    display: flex;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+}
+.input__control {
+    outline: none;
+    border: none;
+    font-size: 1.8rem; 
+    color: white;
+    background-color: transparent;
+}
+.input__box label {
+    pointer-events: none;
+    position: absolute;
+    font-size: 1.6rem;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all .4s ease;
+}
+.input__box svg {
+    font-size: 2.4rem;
+}
+.input__control:focus ~ label,
+.input__control:valid ~ label {
+    top: -5px; 
+    left: 0; 
+    color: rgb(0, 230, 77);
+}
+.input__submit {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+.input__submit:hover{
+    background-color: aliceblue;
+}
+.paragran__input {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: white;
+}
+.paragran__input input {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    color:rgb(0, 230, 77) ;
+}
+
+
+.hidden__form {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}

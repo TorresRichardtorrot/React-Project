@@ -5,6 +5,7 @@
 .product__img img{
     max-width: 660px;
     max-height: 700px;
+    width: 100%;
     object-fit: cover;
 }
 .product__info {
@@ -122,10 +123,13 @@
     background-color: transparent;
     border-radius: 4px;
 }
-@media (max-width:1000px){
+@media (max-width:1090px){
     .product_detail--info{
         flex-direction: column;
-        
+    }
+    .product__img{
+        display: flex;
+        justify-content: center;
     }
     
 }
