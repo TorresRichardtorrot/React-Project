@@ -9,6 +9,7 @@ import CartProvider from './context/CartContext'
 import AdminPage from './admin/AdminPage'
 import AuthProvider from './context/AuthContext'
 import ProtectedRoute from './ProtectedRoute'
+import UserPage from './pages/UserPage'
 
 function App () {
   return (
@@ -25,6 +26,7 @@ function App () {
         <Route path='/about' element={<NosotrosPage />} />
 
         <Route element={<ProtectedRoute/>}>
+          <Route path='/user' element={<UserPage />} />
           <Route path='/admin' element={<AdminPage />} />
         </Route>
 

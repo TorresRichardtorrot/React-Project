@@ -7,14 +7,13 @@ import { EventsAlert } from '../components/EventsAlert/Events'
 function AuthPage () {
   const navigate = useNavigate()
   const { isAuthenticated, error } = useAuth()
-
   useEffect(() => {
-    if (isAuthenticated) navigate('/admin')
+    if (isAuthenticated) navigate('/user')
   }, [isAuthenticated])
 
   return (
         <main className='form__container'>
-            <EventsAlert message={error[0]} error={true}/>
+           {error && error.length > 0 && <EventsAlert message={error[0]} error={true} />}
             <Login/>
         </main>
 

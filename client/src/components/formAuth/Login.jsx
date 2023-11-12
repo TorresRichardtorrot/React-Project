@@ -46,7 +46,7 @@ export const Login = () => {
                     <BiUser/>
                     <label htmlFor={userNameID}>Nombre de usuario</label>
                   </div>
-                : ''
+                : null
             }
 
            <div className='input__box'>

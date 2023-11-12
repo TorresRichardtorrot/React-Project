@@ -17,8 +17,7 @@ export default function AuthProvider ({ children }) {
       setUser(res.data)
       setIsAuthenticated(true)
     } catch (error) {
-      console.log(error)
-      setError(error.response.data)
+      return setError(error.response.data)
     }
   }
 
@@ -27,11 +26,9 @@ export default function AuthProvider ({ children }) {
     try {
       const res = await loginRequest(userDate)
       setUser(res.data)
-      console.log(res.data)
       setIsAuthenticated(true)
     } catch (error) {
-      console.log(error.response.data)
-      setError(error.response.data)
+      return setError(error.response.data)
     }
   }
   // ? Logout
@@ -79,7 +76,7 @@ export default function AuthProvider ({ children }) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ signup, signin, logout, user, loading, error, isAuthenticated }}>
+    <AuthContext.Provider value={{ signup, signin, logout, user, loading, error, isAuthenticated, setError }}>
         {children}
     </AuthContext.Provider>
 

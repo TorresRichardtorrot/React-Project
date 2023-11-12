@@ -25,3 +25,10 @@ html {
     font-size: 60%;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color:rgb(6, 3, 36);
+    color: rgb(255, 255, 255); 
+  }
+} */

@@ -3,26 +3,34 @@ import './style.css'
 import { FiAlertTriangle } from 'react-icons/fi'
 import { BsCheckCircle } from 'react-icons/bs'
 import { useState, useEffect } from 'react'
+import { useAuth } from '../../hook/auth'
 
 export const EventsAlert = ({ message, error }) => {
   const [showAlert, setShowAlert] = useState(true)
-  if (!message) return
+  const { setError } = useAuth()
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowAlert(false)
+      setError([])
     }, 5000)
 
-    return () => clearTimeout(timeoutId)
-  }, [])
-  return (
+    return () => {
+      setShowAlert(true)
+      clearTimeout(timeoutId)
+    }
+  }, [message])
 
-    error
-      ? <div className={'alert__container red'}>
-            <FiAlertTriangle/> <h1>{message}</h1>
-         </div>
-      : <div className='alert__container green'>
-           <BsCheckCircle/> <h1>{message}</h1>
-        </div>
+  if (!showAlert) {
+    return null
+  }
+
+  const IconComponent = error ? FiAlertTriangle : BsCheckCircle
+  const containerClass = error ? 'red' : 'green'
+
+  return (
+    <div className={`alert__container ${containerClass}`}>
+      <IconComponent /> <h1>{message}</h1>
+    </div>
   )
 }
