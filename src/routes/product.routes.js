@@ -27,9 +27,9 @@ router.post(
 
 router.get("/products/:id", getProduct);
 
-router.delete("/products/:id", deleteProduct);
+router.delete("/products/:id",authRequired, deleteProduct);
 
-router.put("/products/:id", updateProduct);
+router.put("/products/:id",authRequired, updateProduct);
 
 //? consultas por marca
 router.get("/brands", getBrans);

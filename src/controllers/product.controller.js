@@ -82,7 +82,6 @@ export const getProduct = async (req, res) => {
 //? Funcion para eliminar un producto
 export const deleteProduct = async (req, res) => {
   const { id } = req.params;
-
   try {
     const removedProduct = await Product.findByIdAndDelete({ _id: id });
     if (!removedProduct)

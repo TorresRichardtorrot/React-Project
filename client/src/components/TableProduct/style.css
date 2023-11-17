@@ -1,7 +1,7 @@
 .table__product{
     width: 100%;
-     background-color:rgb(99, 99, 99) ;
-        border-radius: 20px; 
+     background-color:rgb(0, 17, 73);
+        /* border-radius: 20px;  */
 }
 .table__product__header{
   color: white;
@@ -62,8 +62,22 @@
 
 .search__products {
     width: 100%;
-    padding: 5px 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color:rgb(0, 17, 73);
+}
+
+.search__products__content {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    width: 300px;
+}
+.search__products__content input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.7rem;
 }

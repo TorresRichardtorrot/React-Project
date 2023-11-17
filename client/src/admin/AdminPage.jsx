@@ -1,30 +1,34 @@
 // import { useAuth } from '../hook/auth'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import AdminProduct from './AdminProduct'
-import AdminEdit from './AdminEdit'
+import Create from './Create'
 import AdminInventary from './AdminInventary'
 import Panel from './Panel'
 import './style.css'
 import AdminDashboard from './AdminDashboard'
-
+import { useProducts } from '../hook/useProducts'
+import { EventsAlert } from '../components/EventsAlert/Events'
 function AdminPage () {
-  const [page, setPage] = useState('dashboard') // 'admin' es el nombre del componente
-
+  const { getProducts, message, error } = useProducts()
+  const [page, setPage] = useState('dashboard')
+  useEffect(() => {
+    getProducts()
+  }, [])
   const renderPage = () => {
     switch (page) {
       case 'dashboard':
         return <AdminDashboard/>
       case 'product':
         return <AdminProduct />
-      case 'edit':
-        return <AdminEdit />
+      case 'create':
+        return <Create />
       case 'web':
         return <Navigate to="/" replace />
       case 'inventory':
         return <AdminInventary/>
       default:
-        return null
+        return <AdminDashboard/>
     }
   }
   return (
@@ -33,6 +37,8 @@ function AdminPage () {
       <Panel setPage={setPage} page={page}/>
     </aside>
     <main className='pages__contenedor'>
+
+      {message && <EventsAlert message={message} error={error}/>}
 
     {renderPage()}
     </main>

@@ -2,9 +2,16 @@
 import './style.css'
 import { BsPencilSquare } from 'react-icons/bs'
 import { MdDelete } from 'react-icons/md'
+import { useProducts } from '../../hook/useProducts'
 
-function TableProduct ({ header, data }) {
+function TableProduct ({ header, data, setProductDeleted }) {
+  const { deleteProduct } = useProducts()
   const imgUrl = 'http://localhost:9080/img/'
+
+  const handleClickDelete = (id) => {
+    deleteProduct(id)
+    setProductDeleted(id)
+  }
   return (
     <table className="table__product">
     <thead className="table__product__header">
@@ -26,7 +33,7 @@ function TableProduct ({ header, data }) {
          <td className='list__item__btn'>
           <div className='list__iten__btn__box'>
           <button title='Edit'><BsPencilSquare/>editar</button>
-          <button title='Delete'><MdDelete/>Eliminar</button>
+          <button title='Delete' onClick={() => { handleClickDelete(item._id) }}><MdDelete/>Eliminar</button>
           </div>
         </td>
       </tr>
