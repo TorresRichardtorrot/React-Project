@@ -4,7 +4,7 @@ import { useCart } from '../../hook/useCart'
 
 export function CardProduct ({ product }) {
   const { removeToCart } = useCart()
-  const urlImages = 'http://localhost:9080/img/'
+  const urlImages = import.meta.env.VITE_ROUTER_BACKEND_IMG
 
   const handleRemoveToCart = () => {
     removeToCart(product._id)

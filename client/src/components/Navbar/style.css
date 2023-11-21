@@ -30,11 +30,11 @@ a{
 
 .navbar__contenedor--logo a{
     display: flex;
-    gap: 10px;
 }
 .navbar__contenedor--logo .logo_image-1 { 
-    width: 41px;
-    height: 50px;
+    width: 105px;
+    margin: -26px 0;
+    height: 101px;
 }
 .navbar__contenedor--logo .logo_image-2 { 
     width: 115px;

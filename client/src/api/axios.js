@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://localhost:9080/api',
+  baseURL: import.meta.env.VITE_ROUTER_BACKEND,
   withCredentials: true
 })
 

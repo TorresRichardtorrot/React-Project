@@ -1,5 +1,6 @@
 import axios from './axios'
-const API = 'http://localhost:9080/api'
+
+const API = import.meta.env.VITE_ROUTER_BACKEND
 
 export const registerRequest = (user) => axios.post(`${API}/register`, user)
 

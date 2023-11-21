@@ -4,14 +4,18 @@ import { FiAlertTriangle } from 'react-icons/fi'
 import { BsCheckCircle } from 'react-icons/bs'
 import { useState, useEffect } from 'react'
 import { useAuth } from '../../hook/auth'
+import { useProducts } from '../../hook/useProducts'
 
 export const EventsAlert = ({ message, error }) => {
+  const { setMessage } = useProducts()
   const [showAlert, setShowAlert] = useState(true)
+
   const { setError } = useAuth()
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowAlert(false)
+      setMessage(null)
       setError([])
     }, 5000)
 
@@ -19,7 +23,7 @@ export const EventsAlert = ({ message, error }) => {
       setShowAlert(true)
       clearTimeout(timeoutId)
     }
-  }, [message])
+  }, [])
 
   if (!showAlert) {
     return null

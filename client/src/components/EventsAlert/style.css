@@ -1,5 +1,5 @@
 .alert__container {
-    position: absolute;
+    position: fixed;
     top: 5%;
     right: 50%;
     transform: translate(50%,-10%);

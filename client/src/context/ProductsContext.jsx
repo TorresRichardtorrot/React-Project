@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useState } from 'react'
-import { getProductRequest, getProductsRequest, deleteProductRequest, getNewproductRequest } from '../api/products'
+import { getProductRequest, getProductsRequest, craeteProductRequest, deleteProductRequest, getNewproductRequest } from '../api/products'
 
 export const ProductsContext = createContext()
 
@@ -40,6 +40,7 @@ function ProductsProvider ({ children }) {
     }
   }
 
+  // ? Eliminar producto
   const deleteProduct = async (id) => {
     try {
       const res = await deleteProductRequest(id)
@@ -51,8 +52,19 @@ function ProductsProvider ({ children }) {
       console.log(error)
     }
   }
+  // ? Crear Producto
+  const createProduct = async (data) => {
+    try {
+      const res = await craeteProductRequest(data)
+      // console.log(res)
+      return setMessage(res.data)
+    } catch (error) {
+      console.log(error)
+      return setMessage(error.data)
+    }
+  }
   return (
-      <ProductsContext.Provider value={{ products, getProduct, getProducts, getNewProduct, deleteProduct, message, setMessage, error, setError }}>
+      <ProductsContext.Provider value={{ products, getProduct, getProducts, getNewProduct, deleteProduct, message, setMessage, error, setError, createProduct }}>
         {children}
       </ProductsContext.Provider>
   )

@@ -3,7 +3,7 @@ import { useProducts } from '../hook/useProducts'
 import TableProduct from '../components/TableProduct/TableProduct'
 
 function AdminProduct () {
-  const { products } = useProducts()
+  const { products, getProducts } = useProducts()
   const [filter, setFilter] = useState(products)
   const header = ['imagen', 'nombre', 'marca', 'precio', 'cantidad', 'acción']
   const [productDeleted, setProductDeleted] = useState(null)
@@ -13,6 +13,10 @@ function AdminProduct () {
     setFilter(products)
     setProductDeleted(null)
   }, [products])
+
+  useEffect(() => {
+    getProducts()
+  }, [])
 
   const filterProducts = (filtro) => {
     return products.filter(product => {

@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import './style.css'
 import { FaInstagram, FaFacebookSquare, FaTiktok } from 'react-icons/fa'
-const rutaIcons = '/src/assets/icons/'
+const rutaIcons = '/src/assets'
 function Footer () {
   return (
        <footer>
         <div className='contact__container'>
         <Link className='contact__logo' to='/'>
-                <img className='logo_image-1' src={`${rutaIcons}logo1.svg`} alt="logo" />
-                <img className='logo_image-2' src={`${rutaIcons}logo.svg`} alt="logo" />
+                <img className='logo_footer_image-1' src={`${rutaIcons}/img/new_logo.png`} alt="logo" />
+                <img className='logo_footer_image-2' src={`${rutaIcons}/icons/logo-text.svg`} alt="logo" />
             </Link>
             <h4>Contactos</h4>
             <ul className='contact__box'>

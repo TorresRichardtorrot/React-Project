@@ -5,7 +5,7 @@ import { MdOutlineAddShoppingCart } from 'react-icons/md'
 import { useCart } from '../../hook/useCart'
 function CardProduct ({ product }) {
   const { addToCart } = useCart()
-
+  const UrlImages = import.meta.env.VITE_ROUTER_BACKEND_IMG
   const handleAddToCart = () => {
     const newProduct = { ...product, quantity: 1 }
     addToCart(newProduct)
@@ -17,7 +17,7 @@ function CardProduct ({ product }) {
         <button className='product__addCart' onClick={handleAddToCart}><MdOutlineAddShoppingCart/></button>
 
         <Link to={`/tienda/${product._id}`}>
-      <img src={`http://localhost:9080/img/${product.images[0]}`} alt={product.title} loading='lazy'/>
+      <img src={`${UrlImages}${product.images[0]}`} alt={product.title} loading='lazy'/>
       <div className="product__info">
         <span className="product__brand">{product.brand}</span>
          <h5 className="product__name">{product.title}</h5>

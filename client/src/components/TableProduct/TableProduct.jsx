@@ -6,7 +6,7 @@ import { useProducts } from '../../hook/useProducts'
 
 function TableProduct ({ header, data, setProductDeleted }) {
   const { deleteProduct } = useProducts()
-  const imgUrl = 'http://localhost:9080/img/'
+  const imgUrl = import.meta.env.VITE_ROUTER_BACKEND_IMG
 
   const handleClickDelete = (id) => {
     deleteProduct(id)

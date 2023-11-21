@@ -7,7 +7,7 @@ import './style.css'
 import { useId } from 'react'
 import Cart from '../shoppingCart/Cart'
 import { useCart } from '../../hook/useCart'
-const rutaIcons = '/src/assets/icons/'
+const rutaIcons = '/src/assets/'
 
 function Navbar () {
   const { cart } = useCart()
@@ -24,8 +24,8 @@ function Navbar () {
           <header className='navbar__contenedor'>
             <div className='navbar__contenedor--logo'>
             <Link to='/'>
-                <img className='logo_image-1' src={`${rutaIcons}logo1.svg`} alt="logo" />
-                <img className='logo_image-2' src={`${rutaIcons}logo.svg`} alt="logo" />
+                <img className='logo_image-1' src={`${rutaIcons}/img/new_logo.png`} alt="logo" />
+                <img className='logo_image-2' src={`${rutaIcons}/icons/logo-text.svg`} alt="logo" />
             </Link>
             </div>
             <form className='navbar__contenedor--buscador'>

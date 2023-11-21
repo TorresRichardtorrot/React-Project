@@ -98,6 +98,7 @@ font-size: 4.5rem;
     width: 100%;
     height: 200px;
     background:url('/src/assets/img/new1.png');
+    background-position: center;
     background-repeat: no-repeat;
 }
 .new__product_title h2 {

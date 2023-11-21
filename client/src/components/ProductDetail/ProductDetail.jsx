@@ -9,7 +9,7 @@ function ProductDetail ({ product }) {
   const [sendToCart, setSendToCart] = useState(product)
   const [amount, setAmount] = useState(1)
   const [size, setSize] = useState('')
-  const urlImages = 'http://localhost:9080/img/'
+  const urlImages = import.meta.env.VITE_ROUTER_BACKEND_IMG
 
   useEffect(() => {
     const newCart = { ...product, quantity: amount, size }

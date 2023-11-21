@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "../public/img"),
   filename: (req, file, cb) => {
+    console.log('vamos en 1')
     cb(null, v4() + path.extname(file.originalname).toLocaleLowerCase());
   },
 });
@@ -28,4 +29,4 @@ export const upload = multer({
       cb("Solo se permiten archivos (jpeg, jpg, png, webp)", false);
     }
   },
-}).array("image", 10);
+}).array("images", 5);
