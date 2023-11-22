@@ -23,6 +23,7 @@ function Footer () {
                 <li><Link><FaTiktok /></Link></li>
             </ul>
         </div>
+        <div className='footer__more_link'>
         <div>
             <h4>About</h4>
             <ul>
@@ -46,6 +47,7 @@ function Footer () {
                 <li><Link>Contactanos</Link></li>
                 <li><Link></Link></li>
             </ul>
+        </div>
         </div>
 
        </footer>

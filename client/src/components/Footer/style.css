@@ -36,3 +36,27 @@ font-size: 1.3rem;
     width: 150px;
     margin-top: -30px;
 }
+
+@media (max-width:900px){
+    .logo_footer_image-2{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer h4{
+        text-align: center;
+    }
+    .footer__more_link {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .contact__social{
+        justify-content: center;
+        
+    }
+    .contact__logo {
+        justify-content: center;
+    }
+}
