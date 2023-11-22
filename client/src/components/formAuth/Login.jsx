@@ -2,12 +2,12 @@ import { useForm } from 'react-hook-form'
 import { useAuth } from '../../hook/auth'
 import { MdOutlineEmail } from 'react-icons/md'
 import { BiLockAlt, BiUser } from 'react-icons/bi'
-
 import { Link } from 'react-router-dom'
 import { useId, useState } from 'react'
 import './style.css'
 
 export const Login = () => {
+  const URLIMG = import.meta.env.VITE_LOCAL_IMG
   const [isLogin, setIsLogin] = useState(true)
   const emailID = useId()
   const passwordID = useId()
@@ -33,7 +33,7 @@ export const Login = () => {
           <h1>{isLogin ? 'Iniciar Sesión' : 'Registro'}</h1>
             <div className='form__logo'>
               <Link to={'/'}>
-              <img src="/src/assets/img/white_logo1.png" alt="logo" />
+              <img src={`${URLIMG}/white_logo1.png`} alt="logo" />
               </Link>
             </div>
 

@@ -5,10 +5,10 @@ import './HomeStyle.css'
 import { Link } from 'react-router-dom'
 import CardProduct from '../components/CardProdut/CardProduct'
 import { useProducts } from '../hook/useProducts'
-
 import { useEffect, useState } from 'react'
 
 function HomePage () {
+  const URLImg = import.meta.env.VITE_LOCAL_IMG
   const { getNewProduct } = useProducts()
   const [newProduct, setNewProduct] = useState([])
 
@@ -61,7 +61,7 @@ function HomePage () {
                   </article>
 
                   <aside className='quality__video'>
-                      <video src="/src/assets/img/video.mp4" autoPlay muted loop></video>
+                      <video src={`${URLImg}/video.mp4`} autoPlay muted loop></video>
                   </aside>
               </section>
             {/* ==================================! Seccion 3 !=========================== */}
@@ -95,10 +95,10 @@ function HomePage () {
                   <div className='customers__box'>
 
                   <article className='customers__opinion'>
-                        <div className="rating"><img src="/src/assets/icons/star.png" alt="puntacion del cliente" /></div>
+                        <div className="rating"><img src='/src/assets/star.png' alt="puntacion del cliente" /></div>
                         <h5>Nuestra experiencia con esta empresa ha sido increíble. Sus productos son de primera categoría.</h5>
                         <div className="author-info">
-                            <img src="/src/assets/img/perfil.jpg" alt="Foto de perfil de Juan Perez" />
+                            <img src='/src/assets/perfil.jpg' alt="Foto de perfil de Juan Perez" />
                             <div>
                                 <strong>Juan Perez</strong>
                                 <p>Director ejecutivo de la empresa ABC</p>
@@ -107,11 +107,11 @@ function HomePage () {
                     </article>
 
                     <article className='customers__opinion'>
-                        <div className="rating"><img src="/src/assets/icons/star.png" alt="puntacion del cliente" /></div>
+                        <div className="rating"><img src='/src/assets/star.png' alt="puntacion del cliente" /></div>
                         <h5>Nuestra experiencia con esta empresa ha sido increíble. Sus productos son de primera categoría.</h5>
 
                         <div className="author-info">
-                            <img src="/src/assets/img/perfil.jpg" alt="Foto de perfil de Juan Perez" />
+                            <img src='/src/assets/perfil.jpg' alt="Foto de perfil de Juan Perez" />
                             <div>
                                 <strong>Juan Perez</strong>
                                 <p>Director ejecutivo de la empresa ABC</p>
