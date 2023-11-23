@@ -20,7 +20,7 @@ function Panel ({ setPage, page }) {
             {data.map(item => (
                 <li key={item.id} className={page === item.view ? 'sidebar__list--item list__active' : 'sidebar__list--item'}>
                 <button onClick={() => setPage(item.view)}>
-                 { item.icon} {item.title}
+                 { item.icon} <span>{item.title}</span>
                 </button>
               </li>
             ))}
@@ -31,12 +31,12 @@ function Panel ({ setPage, page }) {
         <hr />
         <li className="sidebar__list--item">
                 <button >
-                 <LuSettings/> Configuracion
+                 <LuSettings/><span>Configuracion</span>
                 </button>
             </li>
             <li className="sidebar__list--item">
                 <button onClick={() => logout()}>
-                 <RiLogoutBoxLine/> Logout
+                 <RiLogoutBoxLine/> <span>Logout</span>
                 </button>
             </li>
         </ul>
