@@ -15,7 +15,11 @@ footer h4 {
     gap: 10px;
 }
 
-
+.footer__more_link{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
 .contact__box {
 font-size: 1.3rem;
 }
@@ -26,14 +30,17 @@ font-size: 1.3rem;
 }
 .contact__logo {
     display: flex;
+    align-items: center;
 }
 .logo_footer_image-1{
     margin-top: -30px;
     width: 117px;
     height: 121px;
+   
 }
 .logo_footer_image-2{
     width: 150px;
+    height: 35px;
     margin-top: -30px;
 }
 

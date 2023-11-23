@@ -63,7 +63,7 @@ function Create () {
 
             <form className='form__product__box' onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
             <div className='form__product--logo'>
-              <img src="/src/assets/Torres-Richard.svg" />
+              <img src="https://i.imgur.com/BpTXwME.png" />
               <h2>Crear Producto</h2>
             </div>
 

@@ -30,6 +30,7 @@ a{
 
 .navbar__contenedor--logo a{
     display: flex;
+    align-items: center;
 }
 .navbar__contenedor--logo .logo_image-1 { 
     width: 105px;
@@ -38,7 +39,7 @@ a{
 }
 .navbar__contenedor--logo .logo_image-2 { 
     width: 115px;
-    height: 50px;
+    height: 30px;
 }
 .navbar__contenedor--buscador {
     position: relative;

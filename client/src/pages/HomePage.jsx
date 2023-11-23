@@ -95,10 +95,10 @@ function HomePage () {
                   <div className='customers__box'>
 
                   <article className='customers__opinion'>
-                        <div className="rating"><img src='/src/assets/star.png' alt="puntacion del cliente" /></div>
+                        <div className="rating"><img src='https://i.imgur.com/LG3Ik0K.png' alt="puntacion del cliente" /></div>
                         <h5>Nuestra experiencia con esta empresa ha sido increíble. Sus productos son de primera categoría.</h5>
                         <div className="author-info">
-                            <img src='/src/assets/perfil.jpg' alt="Foto de perfil de Juan Perez" />
+                            <img src='https://i.imgur.com/xwOrpEl.jpg' alt="Foto de perfil de Juan Perez" />
                             <div>
                                 <strong>Juan Perez</strong>
                                 <p>Director ejecutivo de la empresa ABC</p>
@@ -107,11 +107,11 @@ function HomePage () {
                     </article>
 
                     <article className='customers__opinion'>
-                        <div className="rating"><img src='/src/assets/star.png' alt="puntacion del cliente" /></div>
+                        <div className="rating"><img src='https://i.imgur.com/LG3Ik0K.png' alt="puntacion del cliente" /></div>
                         <h5>Nuestra experiencia con esta empresa ha sido increíble. Sus productos son de primera categoría.</h5>
 
                         <div className="author-info">
-                            <img src='/src/assets/perfil.jpg' alt="Foto de perfil de Juan Perez" />
+                            <img src='https://i.imgur.com/xwOrpEl.jpg' alt="Foto de perfil de Juan Perez" />
                             <div>
                                 <strong>Juan Perez</strong>
                                 <p>Director ejecutivo de la empresa ABC</p>
