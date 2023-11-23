@@ -35,6 +35,7 @@
 .list__iten__btn__box {
     display: flex;
     justify-content: center;
+    padding: 0 5px;
     align-items: center;
     gap: 10px;
     width: 100%;

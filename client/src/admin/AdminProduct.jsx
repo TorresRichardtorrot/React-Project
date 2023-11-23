@@ -41,7 +41,9 @@ function AdminProduct () {
                   <input type="text" onChange={handleChangeSearch} placeholder='Buscar...' autoFocus/>
                 </div>
               </form>
-            {filter && products.length > 0 && <TableProduct setProductDeleted={ setProductDeleted} header={header} data={filter}/>}
+              <div className='container__table__product'>
+                {filter && products.length > 0 && <TableProduct setProductDeleted={setProductDeleted} header={header} data={filter}/>}
+              </div>
         </div>
         )
       : (

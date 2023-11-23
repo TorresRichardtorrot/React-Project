@@ -48,8 +48,10 @@
 .sidebar__list::-webkit-scrollbar-thumb {
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
-  }
-
+}
+.container__table__product{
+    overflow-x: auto;
+}
 .sidebar__list--item button {
     display: flex;
     align-items: center;
@@ -133,6 +135,7 @@
     font-size: 5rem;   
 }
 
+
 /* !========================= Graficas =============== */
 
 .chart__dashboard__container {
@@ -143,10 +146,14 @@
 }
 .chart__dashboard__line {
     width: 70%;
+    overflow: auto;
     padding: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.192);
     border-radius: 10px;
     height: 100%;
+}
+.chart__dashboard__line--box{
+    min-width: 700px;
 }
 .chart__dashboard__pie {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.192);
@@ -290,7 +297,6 @@
     }
     .chart__dashboard__line {
         width: 100%;
-        height: 297px;
     }
 }
 @media (max-width: 950px){
@@ -309,5 +315,8 @@
     }
     .from__section{
         flex-direction: column;
+    }
+    .cards__dashboard__container{
+        padding: 30px 5px;
     }
 }

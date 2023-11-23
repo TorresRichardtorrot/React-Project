@@ -23,7 +23,9 @@ function AdminDashboard () {
         </div>
         <div className='chart__dashboard__container'>
           <div className='chart__dashboard__line'>
+            <div className='chart__dashboard__line--box'>
             <LineChart/>
+            </div>
           </div>
           <div className='chart__dashboard__pie'>
             <PieChart/>
