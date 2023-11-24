@@ -7,7 +7,6 @@ import { useId, useState } from 'react'
 import './style.css'
 
 export const Login = () => {
-  const URLIMG = import.meta.env.VITE_LOCAL_IMG
   const [isLogin, setIsLogin] = useState(true)
   const emailID = useId()
   const passwordID = useId()
@@ -33,7 +32,7 @@ export const Login = () => {
           <h1>{isLogin ? 'Iniciar Sesión' : 'Registro'}</h1>
             <div className='form__logo'>
               <Link to={'/'}>
-              <img src={`${URLIMG}/white_logo1.png`} alt="logo" />
+              <img src="https://i.imgur.com/BpTXwME.png" alt="logo" />
               </Link>
             </div>
 
