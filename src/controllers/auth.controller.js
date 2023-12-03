@@ -7,6 +7,7 @@ import { TOKEN_SECRET } from "../config.js";
 //?Funcion para registra el usuario
 export const register = async (req, res) => {
   const { email, username, password } = req.body;
+  // validar los datos recibidos,  debes asegurarte que el email, password y username están en el formato correcto 
   try {
     const userFound = await User.findOne({ email });
     if (userFound) return res.status(400).json(["El usuario ya existe"]);
