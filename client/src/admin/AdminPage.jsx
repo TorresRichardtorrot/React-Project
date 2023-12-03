@@ -22,6 +22,7 @@ function AdminPage () {
   const handleClickMenu = () => {
     setMenu(!menu)
   }
+  // usa un router como React router para esto. forzar renderizado de un componente basado en ese parámetro no es óptimo a nivel de performance y no funciona con la gestión de botones en el navegador
   const renderPage = () => {
     switch (page) {
       case 'dashboard':
