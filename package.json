@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "set NODE_OPTIONS=--experimental-vm-modules && jest",
+    // no usar nodemon para dev puedes usar nestjs como framework para crear las apis
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
