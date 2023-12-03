@@ -16,6 +16,7 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    // no uses librerías de formularios. puedes usar validacion de html y css. eso es suficiente si quieres interactividad puedes crear un reductor de React y un contexto para manejar los formularios
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.17.0",
