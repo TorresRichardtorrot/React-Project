@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AuthPage from './pages/AuthPage'
 import TiendaPage from './pages/TiendaPage'
@@ -13,10 +13,11 @@ import UserPage from './pages/UserPage'
 
 function App () {
   return (
+    
     <AuthProvider>
     <ProductsProvider>
     <CartProvider>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/auth' element={<AuthPage />} />
@@ -31,7 +32,7 @@ function App () {
         </Route>
 
       </Routes>
-  </BrowserRouter>
+  </HashRouter>
   </CartProvider>
   </ProductsProvider>
   </AuthProvider>
