@@ -24,5 +24,10 @@ app.use(cookieParser());
 app.use("/api", authRouter);
 app.use("/api", productRouter);
 app.use(express.static(join(__dirname, "public")));
+app.use(express.static(join(__dirname,"client/dist")));
+
+app.get('/*', (req,res)=>{
+    res.sendFile(join(__dirname, 'client/dist', 'index.html'))
+});
 
 export default app;

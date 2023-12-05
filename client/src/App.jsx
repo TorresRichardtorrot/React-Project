@@ -17,7 +17,7 @@ function App () {
     <AuthProvider>
     <ProductsProvider>
     <CartProvider>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/auth' element={<AuthPage />} />
@@ -32,7 +32,7 @@ function App () {
         </Route>
 
       </Routes>
-  </HashRouter>
+  </BrowserRouter>
   </CartProvider>
   </ProductsProvider>
   </AuthProvider>
