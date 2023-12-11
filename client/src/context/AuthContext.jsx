@@ -43,7 +43,7 @@ export default function AuthProvider ({ children }) {
       setError(error.response.data)
     }
   }
-   // ? CheckLogin
+   // ? CheckLogin ver
   async function checkLogin () {
     const cookies = Cookies.get()
     console.log(cookies)
